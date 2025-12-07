@@ -145,10 +145,10 @@ let musicPlayer: HTMLAudioElement | null = null;
 export const getMusicUrl = (musicType: string): string => {
   const musicUrls: { [key: string]: string } = {
     rainfall: 'https://assets.mixkit.co/active_storage/sfx/2392/2392-preview.mp3',
-    ambient: '/Focus-Forge/audio/mixkit-european-forest-ambience-1213.wav',
+    ambient: '${import.meta.env.BASE_URL}audio/mixkit-european-forest-ambience-1213.wav',
     deepfocus: 'https://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg',
     chill: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
-    lofi: '/Focus-Forge/audio/focus-glow-lofi-269098.mp3',
+    lofi: '${import.meta.env.BASE_URL}audio/focus-glow-lofi-269098.mp3',
   };
   return musicUrls[musicType] || '';
 };
